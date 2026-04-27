@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { InputForm } from "./components/InputForm";
 import { ResultsDisplay } from "./components/ResultsDisplay";
+import { PinGate } from "./components/PinGate";
 import type { CalculationResponse, CalculationTrace } from "./types";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   };
 
   return (
+    <PinGate>
     <div className="min-h-screen bg-neutral-50">
       {/* Header */}
       <header className="bg-gradient-to-r from-primary-800 to-primary-700 text-white shadow-md">
@@ -77,6 +79,7 @@ function App() {
         Based on EU Regulation 2023/1805 (FuelEU Maritime)
       </footer>
     </div>
+    </PinGate>
   );
 }
 
